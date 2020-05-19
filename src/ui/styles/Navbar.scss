@@ -1,0 +1,10 @@
+header {
+    display: flex;
+    justify-content: center;
+    .inner-header {
+        width: 95%;
+        background: gray;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
