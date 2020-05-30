@@ -1,0 +1,15 @@
+/* .detecter-section {
+     .innner-form {
+         text-align: center;
+         input {
+             width: 50%;
+         }
+     }
+ } */
+
+.detecter-section .innner-form {
+    text-align: center;
+}
+.detecter-section input {
+    width: 50%;
+}

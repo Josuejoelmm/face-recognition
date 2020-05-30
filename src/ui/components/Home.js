@@ -1,6 +1,7 @@
 import React from 'react';
-import AppDetecterFormConnected from './connectComponents/AppDetecterFormConnected'
-import '../styles/Home.scss';
+import AppDetecterFormContainer from './containers/AppDetecterFormContainer';
+import ImagePreviewContainer from './containers/ImagePreviewContainer';
+import '../styles/Home.css';
 
 class Home extends React.Component {
     render() {
@@ -12,7 +13,8 @@ class Home extends React.Component {
                             <figure></figure>
                         </div>
                     </div>
-                    <AppDetecterFormConnected />
+                    <AppDetecterFormContainer />
+                    <ImagePreviewContainer />
                 </div>
             </section>
         );
