@@ -1,24 +1,19 @@
 import React from 'react';
-import '../styles/AppDetecterForm.scss';
-import Clarifai from '../../api/index';
+import '../styles/AppDetecterForm.css';
 
 class AppDetecterForm extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.onButtonSubmit = this.onButtonSubmit.bind(this);
+        this.onInputChangeValue = this.onInputChangeValue.bind(this);
     }
+
+    onInputChangeValue(e) {
+        this.props.updateInputValue(e.target.value)
+    }
+
     onButtonSubmit() {
-        console.log('click');
-        
-        // Clarifai.app.models.predict("4c824092f7bf445f99525636795e9439", "https://samples.clarifai.com/face-det.jpg")
-        //     .then(response => {
-        //         console.log('click');
-                
-        //         console.log(response, 'clarifai response');
-        //       // do something with response
-        //     },
-        //     err => console.log(err)
-        //   );
+        this.props.detectFace(this.props.inputUrl)
     }
     render() {
         return(
@@ -31,7 +26,7 @@ class AppDetecterForm extends React.Component {
                         <div>
                             <label htmlFor="detect-input">Image URL</label>
                             <br />
-                            <input id="detect-input" placeholder="put some image URL to preview" />
+                            <input value={this.props.inputUrl} onChange={this.onInputChangeValue} id="detect-input" placeholder="https://your-image-example/url.jpg" />
                             <button onClick={this.onButtonSubmit}>DETECT</button>
                         </div>
                     </div>
