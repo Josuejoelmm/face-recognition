@@ -13,7 +13,8 @@ class AppDetecterForm extends React.Component {
     }
 
     onButtonSubmit() {
-        this.props.detectFace(this.props.inputUrl)
+        this.props.setImageUrl(this.props.inputUrl);
+        this.props.detectFace(this.props.inputUrl);
     }
     render() {
         return(

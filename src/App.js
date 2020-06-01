@@ -1,17 +1,24 @@
 import React from 'react';
-import Navbar from './ui/components/Navbar';
+import NavbarContainer from './ui/components/containers/NavbarContainer';
 import Home from './ui/components/Home';
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import ModalContainer from './ui/components/containers/ModalContainer';
+import SignIn from './ui/components/SignIn';
+import Register from './ui/components/Register';
 
 class App extends React.Component {
     render() {
         return (
             <Provider store={store}>
-                <div>
-                    <Navbar />
+                <>
+                    <NavbarContainer />
                     <Home />
-                </div>
+                    <ModalContainer>
+                        {/* <SignIn /> */}
+                        <Register />
+                    </ModalContainer>
+                </>
             </Provider>
         );
     }

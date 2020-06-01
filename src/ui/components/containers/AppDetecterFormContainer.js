@@ -1,6 +1,6 @@
 import AppDetecterForm from '../AppDetecterForm';
 import { connect } from 'react-redux';
-import { detectFace, updateInputValue } from '../../../redux/actions';
+import { detectFace, updateInputValue, setImageUrl } from '../../../redux/actions';
 
 export default connect(
     state => {
@@ -10,6 +10,7 @@ export default connect(
     },
     {
         detectFace,
-        updateInputValue
+        updateInputValue,
+        setImageUrl
     }
 )(AppDetecterForm);

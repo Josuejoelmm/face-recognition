@@ -5,6 +5,7 @@ export default connect(
     state => {
         return {
             faceDetectedData: state.faceDetectedData,
-            isLoading: state.isLoading
+            isLoading: state.isLoading,
+            imageUrl: state.imageUrl,
         }
     })(ImagePreview);

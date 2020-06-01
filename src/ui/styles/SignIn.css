@@ -1,0 +1,15 @@
+.sign-in-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input[type="submit"] {
+    display: block;
+    margin: 15px auto;
+}
+h6 {
+    margin: 5px 0 15px;
+    font-size: 1em;
+    text-decoration: underline;
+    cursor: pointer;
+}
