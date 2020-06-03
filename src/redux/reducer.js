@@ -6,7 +6,7 @@ const initialState = {
     faceDetectedData: {},
     faceDetecteError: '',
     isLoading: false,
-    isModalOpen: false,
+    isModalOpen: true,
     isLogged: false,
 }
 

@@ -1,7 +1,14 @@
 import React from 'react';
 import '../styles/SignIn.css';
+import { withRouter } from 'react-router-dom';
 
-export default function SignIn() {
+function SignIn(props) {
+    function logIn() {
+        props.history.push('/dashboard');
+    }
+    function register() {
+        props.history.push('/register');
+    }
     return (
         <div className="sign-in-modal">
             <div>
@@ -12,10 +19,12 @@ export default function SignIn() {
                 <input type="text"/><br/>
                 <label>Password</label><br/>
                 <input type="text"/><br/>
-                <input type="submit" value="Sign in" />
+                <input onClick={logIn} type="submit" value="Sign in" />
             </div>
             <span>- OR -</span>
-            <h6>Register</h6>
+            <h6 onClick={register}>Register</h6>
         </div>
     )
 }
+
+export default withRouter(SignIn);

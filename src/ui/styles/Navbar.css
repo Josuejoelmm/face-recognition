@@ -8,6 +8,13 @@ header {
     display: flex;
     justify-content: flex-end;
 }
-.sign-in {
+.sign-in, .register {
     cursor: pointer;
+}
+.login-options {
+    display: flex;
+    justify-content: space-between;
+}
+.login-options .register {
+    margin-left: 30px;
 }

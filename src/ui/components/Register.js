@@ -1,7 +1,11 @@
 import React from 'react';
 import '../styles/SignIn.css';
+import { withRouter } from 'react-router-dom';
 
-export default function Register() {
+function Register(props) {
+    function logIn() {
+        props.history.push('/dashboard');
+    }
     return (
         <div className="sign-in-modal">
             <div>
@@ -14,8 +18,10 @@ export default function Register() {
                 <input type="text"/><br/>
                 <label>Password</label><br/>
                 <input type="text"/><br/>
-                <input type="submit" value="Register" />
+                <input onClick={logIn} type="submit" value="Register" />
             </div>
         </div>
     )
 }
+
+export default withRouter(Register);
